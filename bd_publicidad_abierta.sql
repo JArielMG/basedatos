@@ -3511,7 +3511,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`patepjf`@`%` SQL SECURITY DEFINER VIEW `vpre
 --
 DROP TABLE IF EXISTS `vso_actual`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`patepjf`@`%` SQL SECURITY DEFINER VIEW `vso_actual`  AS  select `a`.`id_s` AS `id_user`,`a`.`username` AS `username`,`a`.`password` AS `password`,`a`.`cookie_id` AS `cookie_id`,`a`.`token` AS `token`,`a`.`email` AS `email`,`a`.`fname` AS `fname`,`a`.`lname` AS `lname`,`a`.`public_office` AS `public_office`,`a`.`phone` AS `phone`,`a`.`created` AS `created`,`a`.`lastlogin` AS `lastlogin`,`a`.`lastip` AS `lastip`,`a`.`notes` AS `notes`,`a`.`record_user` AS `record_user`,`a`.`last_update` AS `last_update`,`a`.`active` AS `active`,`b`.`id_sujeto_obligado` AS `id_sujeto_obligado`,`b`.`id_so_atribucion` AS `id_so_atribucion` from (`sec_users` `a` join `tab_sujetos_obligados` `b`) where (`a`.`record_user` = `b`.`id_sujeto_obligado`) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`patepjf`@`%` SQL SECURITY DEFINER VIEW `vso_actual`  AS  select `a`.`id_user` AS `id_user`,`a`.`username` AS `username`,`a`.`password` AS `password`,`a`.`cookie_id` AS `cookie_id`,`a`.`token` AS `token`,`a`.`email` AS `email`,`a`.`fname` AS `fname`,`a`.`lname` AS `lname`,`a`.`public_office` AS `public_office`,`a`.`phone` AS `phone`,`a`.`created` AS `created`,`a`.`lastlogin` AS `lastlogin`,`a`.`lastip` AS `lastip`,`a`.`notes` AS `notes`,`a`.`record_user` AS `record_user`,`a`.`last_update` AS `last_update`,`a`.`active` AS `active`,`b`.`id_sujeto_obligado` AS `id_sujeto_obligado`,`b`.`id_so_atribucion` AS `id_so_atribucion` from (`sec_users` `a` join `tab_sujetos_obligados` `b`) where (`a`.`record_user` = `b`.`id_sujeto_obligado`) ;
 
 -- --------------------------------------------------------
 
